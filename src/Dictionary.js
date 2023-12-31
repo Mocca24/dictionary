@@ -3,6 +3,7 @@ import axios from "axios";
 import Results from "./Results";
 import "./Dictionary.css";
 
+
 export default function Dictionary(){
     let [word, setWord] = useState("");
     let [results, setResults] = useState (null);
@@ -28,10 +29,16 @@ export default function Dictionary(){
 
     return (
     <div className="Dictionary">
-        <form onSubmit={search}>
-        <input type="search" onChange={handleWordChange}/>
-        </form>
 
+    <h1>Dictionary</h1>
+
+        <section>
+        <form onSubmit={search}>
+        <input type="search" 
+        placeholder="What are you looking for?"
+        onChange={handleWordChange}/>
+        </form>
+</section>
         <Results results = {results}/> 
 
     </div>
